@@ -1,5 +1,5 @@
-
-
-marniebot.com, www.marniebot.com {
-    reverse_proxy marniedb:8000
+marniebot.com {
+    reverse_proxy marniedb:8000 {
+        header_down Strict-Transport-Security max-age=31536000;
+    }
 }
