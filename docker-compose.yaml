@@ -18,11 +18,11 @@ services:
       - "443:443"
     volumes:
       - $PWD/Caddyfile:/ect/caddy/Caddyfile
-      - $PWD/marnie-web/build:/var/www/html
+      # - $PWD/marnie-web/build:/var/www/html
       - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
-    command: chmod -R ugo+rwx /var/www/html
+    # command: chmod -R ugo+rwx /var/www/html
 
 
 
