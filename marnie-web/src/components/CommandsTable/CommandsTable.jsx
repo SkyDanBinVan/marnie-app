@@ -4,7 +4,7 @@ import "./CommandsTable.css";
 export default function CommandsTable() {
     const [commands, setCommands] = useState([])
     useEffect(() => {
-        fetch("http://0.0.0.0:8000")
+        fetch("https://api.marniebot.com")
         .then(res => {
           if (res.ok) {
             return res.json()
