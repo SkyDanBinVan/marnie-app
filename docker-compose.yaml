@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  marniedb:
+    build: ./marnie-b
+    container_name: marniedb
+    restart: unless-stopped
+    volumes:
+      - ./marnie-b/sqlite:/app/sqlite
+
+
+
+  caddy:
+    image: caddy/caddy:2.2.1-alpine
+    container_name: caddy-service
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/Caddyfile:/ect/caddy/Caddyfile
+      - $PWD/marnie-web/build:/var/www/html
+      - $PWD/site:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+
+
+
+volumes:
+  caddy_data:
+  caddy_config:
