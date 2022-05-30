@@ -22,7 +22,7 @@ services:
       - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
-    command: chmod -R ugo+rwx /var/www/html && systemclt reload caddy
+    command: chmod -R ugo+rwx /var/www/html
 
 
 
