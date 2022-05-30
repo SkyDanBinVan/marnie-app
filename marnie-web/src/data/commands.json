@@ -1,0 +1,73 @@
+{
+    "commands": [
+        {
+            "command": "!hi",
+            "description": "Say hi to MarnieBot!",
+            "notes": "Why not? It's polite :)",
+            "cooldown": 3,
+            "header": "General"
+        },
+        {
+            "command": "!commands",
+            "description": "MarnieBot will send you here!",
+            "notes": "It's just a hyperlink, no biggie.",
+            "cooldown": 3,
+            "header": "General"
+        },
+        {
+            "command": "!points",
+            "description": "Check how many MarnieBot points you have.",
+            "notes": "You earn MarnieBot points by watching the stream. 1 point a minute! Points can currently be used to win tokens (see !play) or can be given to other chatters (see !give). I will try to add more functionalitly so feel free to leave your ideas in chat!",
+            "cooldown": 2,
+            "header": "General"
+        },
+        {
+            "command": "!play",
+            "description": "Spend 60 MarnieBot points to try and win a token!",
+            "cooldown": 2,
+            "header": "General"
+        },
+        {
+            "command": "!tokens",
+            "description": "Check how many MarnieBot tokens you have.",
+            "cooldown": 2,
+            "header": "General"
+        },
+        {
+            "command": "!give {points} {username}",
+            "description": "Give another viewer your marnie points!",
+            "notes": "Just type '!give {points(must be a number)} {username}' to send your points. You must have enough points yourself to send some. Check your points with !points",
+            "header": "General"
+        },
+        {
+            "command": "!codes",
+            "description": "Check how many pokemon TCGO codes there are left in the database.",
+            "cooldown": 3,
+            "header": "Pokemon TCGO"
+        },
+        {
+            "command": "!buypack",
+            "description": "Check how many MarnieBot tokens you have.",
+            "notes": "You will need to whisper your email to MarnieBot to recieve your code.",
+            "header": "Pokemon TCGO"
+        },
+        {
+            "command": "!gear",
+            "description": "Check what gear I used in the last game.",
+            "cooldown": 2,
+            "header": "Splatoon 2"
+        },
+        {
+            "command": "!avesplats",
+            "description": "My average splats per game over the last 50 games!",
+            "cooldown": 2,
+            "header": "Splatoon 2"
+        },
+        {
+            "command": "!kd",
+            "description": "My k/d ratio over the last 50 games",
+            "cooldown": 2,
+            "header": "Splatoon 2"
+        }
+    ]
+}

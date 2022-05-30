@@ -1,0 +1,37 @@
+.streamDiv {
+    max-width: 853px;
+    width: 100%;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    /* overflow: scroll; */
+}
+.twitchChat {
+    flex-grow: 1;
+}
+@media only screen and (min-width: 1200px){
+    .heroContainer {
+        display: flex;
+    }
+    .streamDiv {
+        max-height: calc(100vh - 90px);
+        height: calc(100vh - 90px);
+        top: 80px;
+        position: sticky;
+        
+    }
+}
+@media only screen and (max-width: 1200px){
+    .streamDiv {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .twitchChat {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .streamDiv {
+        display: none;
+    }
+}

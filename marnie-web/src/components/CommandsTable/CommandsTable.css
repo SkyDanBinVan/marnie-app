@@ -1,0 +1,14 @@
+table {
+  background-color: #1c2237;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 1rem auto;
+  opacity: .8;
+}
+table th, table td {
+  border: 1px solid;
+  padding: 8px;
+}
+.notes {
+  color: grey;
+}
