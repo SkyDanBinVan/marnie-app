@@ -1,13 +1,12 @@
 version: "3.8"
 services:
+
   marniedb:
     build: ./marnie-b
     container_name: marniedb
     restart: unless-stopped
     volumes:
       - ./marnie-b/sqlite:/app/sqlite
-
-
 
   caddy:
     image: caddy/caddy:2.2.1-alpine
@@ -22,8 +21,6 @@ services:
       - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
-
-
 
 volumes:
   caddy_data:

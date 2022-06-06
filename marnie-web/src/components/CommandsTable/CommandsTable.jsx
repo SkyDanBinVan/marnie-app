@@ -1,10 +1,11 @@
 import React, { useEffect, useState} from "react";
 import "./CommandsTable.css";
 
+const URL = process.env.REACT_APP_DB_URL
 export default function CommandsTable() {
     const [commands, setCommands] = useState([])
     useEffect(() => {
-        fetch("https://api.marniebot.com")
+        fetch(`${URL}/api/commands`)
         .then(res => {
           if (res.ok) {
             return res.json()

@@ -5,7 +5,7 @@ const { Sequelize } = require("./connect");
 // Define const
 const app = express();
 const port = 8000;
-const router = require("./routes/routeindex")
+const router = require("./routes/index")
 // Use cors protocol
 app.use(cors())
 // Use Express server
