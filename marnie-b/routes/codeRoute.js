@@ -14,7 +14,7 @@ router
                 const setTitle = body.set;
                 delete body.set;
                 let [set, created] = await Set.findOrCreate({
-                    where: { title: setTitle },
+                    where: { title : setTitle },
                 });
                 const code = await Code.create(body);
                 await set.addCode(code);
