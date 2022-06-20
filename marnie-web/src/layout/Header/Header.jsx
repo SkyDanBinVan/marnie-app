@@ -10,7 +10,7 @@ function Header() {
         <>
         <header>
             <div className='leftSide'>
-                <Link onClick={() => setIsMenu(false)} to="/"><img className="marnie" src="/Marnie450x450.png" alt="MarnieBot" /></Link>
+                <Link onClick={() => setIsMenu(false)} to="/"><img className="logo" src="/Marnie450x450.png" alt="MarnieBot" /></Link>
                 <h1><Link onClick={() => setIsMenu(false)} to="/">MarnieBot</Link></h1>
             </div>
             <div className={menuClass} onClick={() => setIsMenu(!isMenu)}>
@@ -18,10 +18,7 @@ function Header() {
             </div>
             <nav className='rightSide' id={rightSideId}>
                 <ul dir='rtl'>
-                    <li><Link onClick={() => setIsMenu(false)} to="/">Home</Link></li>
-                    <li><Link onClick={() => setIsMenu(false)} to="/twitch">Twitch</Link></li>
-                    <li><Link onClick={() => setIsMenu(false)} to="/merch">Merch</Link></li>
-                    <li><Link onClick={() => setIsMenu(false)} to="/commands">Commands</Link></li>
+                    <li><Link onClick={() => setIsMenu(false)} to="/leaderboard">Leaderboard</Link></li>
                 </ul>
             </nav>
         </header>

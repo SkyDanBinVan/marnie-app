@@ -20,18 +20,17 @@ router
             res.status(400).send(e.message);
         }
     })
-    .get("/:id", async (req, res) => {
+    .get("/:title", async (req, res) => {
         try {
-            const set = await Set.findOne({where : { title : req.params.id}});
+            const set = await Set.findOne({where : { title : req.params.title}});
             res.status(200).send(set);
         } catch (e) {
             res.status(400).send(e.message);
         }
     })
-    .put("/:id", async (req, res) => {
+    .put("/:title", async (req, res) => {
         try {
-            const set = await Set.findOne({where : { title : req.params.id}});
-
+            const set = await Set.findOne({where : { title : req.params.title}});
             await set.update(req.body);
             await set.save();
             await set.reload();
@@ -40,14 +39,14 @@ router
             res.status(400).send(e.message);
         }
     })
-    .delete("/:id", async (req, res) => {
+    .delete("/:title", async (req, res) => {
         try {
             await Set.destroy({
                 where: {
-                    title : req.params.id,
+                    title : req.params.title,
                 },
             });
-            res.status(200).send(`Set ${req.params.id} deleted.`);
+            res.status(200).send(`Set ${req.params.title} deleted.`);
         } catch (e) {
             res.status(400).send(e.message);
         }

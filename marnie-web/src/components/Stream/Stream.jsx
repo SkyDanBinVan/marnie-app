@@ -14,12 +14,12 @@ export default function Stream({ chat }) {
                     theme="dark"
                     muted={false}
                     onVideoPause={() => console.log(":(")}
-                    withChat={chat}
+                    withChat={!chat}
                     width="100%"
                 />
             </div>
             <div className="twitchChat">
-                {!chat ? (
+                {chat ? (
                     <TwitchChat
                         channel="binvan"
                         theme="dark"

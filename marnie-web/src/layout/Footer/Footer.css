@@ -3,15 +3,38 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #1c2237;
+    color: white;
 }
-.footerLinks {
-    margin: 50px;
-    
+footer a {
+    color: white;
 }
-.footerLinks ul {
-    list-style-type: none;
-}
-.footerLinksContainer {
+.footerContent {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+}
+.text {
+    text-align: center;
+}
+hr {
+    width: 80%;
+    margin: auto;
+}
+.thing {
+    width: 100%;
+    max-width: 200px;
+}
+.logo_footer {
+    max-width: 100%;
+}
+@media only screen and (max-width: 550px){
+    .footerContent {
+        flex-direction: column;
+    }
+    address {
+        text-align: center;
+    }
+    .thing {
+        margin: 0 auto;
+    }
 }

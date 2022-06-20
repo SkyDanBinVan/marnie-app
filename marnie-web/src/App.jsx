@@ -2,11 +2,9 @@ import { Route, Routes } from "react-router-dom";
 // import "normalize.css"
 import "./App.css";
 import Particles from "react-tsparticles";
-import Twitch from "./components/Twitch/Twitch";
 import Layout from "./layout/Layout/Layout";
-import CommandsTable from "./components/CommandsTable/CommandsTable";
-import Hero from "./components/Hero/Hero";
-import Merch from "./components/Merch/Merch";
+import Hero from "./pages/Hero/Hero";
+import Leaderboard from "./pages/Leaderboard/Leaderboard";
 
 function App() {
     const particlesInit = (main) => {
@@ -100,9 +98,7 @@ function App() {
             <Layout>  
                 <Routes>
                     <Route path="/" element={<Hero />}></Route>
-                    <Route path="/commands" element={<CommandsTable />}></Route>
-                    <Route path="/twitch" element={<Twitch chat={true}/>}></Route>
-                    <Route path="/merch" element={<Merch />}></Route>
+                    <Route path="/leaderboard" element={<Leaderboard />}></Route>
                 </Routes>
             </Layout>
         </>

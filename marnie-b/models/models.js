@@ -67,6 +67,7 @@ const codeModel = {
     code: {
         type: sequelize.STRING,
         allowNull: false,
+        unique: true,
         validate: {
             notNull: {
                 msg: "Must contain code."
