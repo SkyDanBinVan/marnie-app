@@ -16,7 +16,7 @@ export default function Footer() {
             <hr />
             <p>
                 By{" "}
-                <a href="https://www.twitch.tv/binvan">Binman</a>
+                <a href="https://www.twitch.tv/danimoussa">danimoussa</a>
             </p>
         </footer>
     );
