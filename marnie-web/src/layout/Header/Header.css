@@ -42,7 +42,7 @@ h1 {
   margin: 10px;
 }
 header a {
-  color: rgb(0, 0, 0);
+  color: white;
   cursor: pointer;
   max-height: 80px;
 }

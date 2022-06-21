@@ -1,10 +1,10 @@
 const { User, Code } = require("../connect");
-
+const auth = require("../middleware/auth")
 const express = require("express");
 const router = express.Router();
 
 router
-    .post("/", async (req, res) => {
+    .post("/", auth, async (req, res) => {
         try {
             const user = await User.findOrCreate({
                 where: { name: req.body.name },
@@ -23,15 +23,8 @@ router
             const user = await User.findOne({
                 where: { name: req.params.name },
                 include: Code,
+                attributes: ['name', "points"]
             });
-            res.status(200).send(user);
-        } catch (e) {
-            res.status(400).send(e.message);
-        }
-    })
-    .get("/id/:id", async (req, res) => {
-        try {
-            const user = await User.findByPk(req.params.id);
             res.status(200).send(user);
         } catch (e) {
             res.status(400).send(e.message);
@@ -39,13 +32,13 @@ router
     })
     .get("/", async (req, res) => {
         try {
-            const users = await User.findAll({ include: Code });
+            const users = await User.findAll({ attributes: ['name', "points"] });
             res.status(200).send(users);
         } catch (e) {
             res.status(400).send(e.message);
         }
     })
-    .put("/:name", async (req, res) => {
+    .put("/:name", auth, async (req, res) => {
         try {
             const user = await User.findOne({
                 where: { name: req.params.name },
@@ -58,7 +51,7 @@ router
             res.status(400).send(e.message);
         }
     })
-    .put("/:name/:code", async (req, res) => {
+    .put("/:name/:code", auth, async (req, res) => {
         try {
             const [user, created] = await User.findOrCreate({
                 where: { name: req.params.name },
@@ -73,7 +66,7 @@ router
             res.status(400).send(e.message);
         }
     })
-    .delete("/:name", async (req, res) => {
+    .delete("/:name", auth, async (req, res) => {
         try {
             await User.destroy({
                 where: {

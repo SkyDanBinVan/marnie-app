@@ -1,4 +1,5 @@
 const express = require("express");
+const auth = require('../middleware/auth')
 const router = express.Router();
 
 const commandRoute = require("./commandRoute")
@@ -8,7 +9,8 @@ const setRoute = require("./setRoute");
 
 router.use("/api/commands", commandRoute);
 router.use("/api/users", userRoute);
-router.use("/api/codes", codeRoute);
+router.use(auth)
 router.use("/api/sets", setRoute);
+router.use("/api/codes", codeRoute);
 
 module.exports = router;
