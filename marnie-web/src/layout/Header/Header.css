@@ -45,6 +45,7 @@ header a {
   color: white;
   cursor: pointer;
   max-height: 80px;
+  text-decoration: none;
 }
 #hidden {
   display: flex;
