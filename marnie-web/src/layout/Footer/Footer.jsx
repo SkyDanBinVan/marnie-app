@@ -1,16 +1,13 @@
 import React from "react";
 import "./Footer.css";
-import { AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
 
 export default function Footer() {
     return (
         <footer>
             <div className="footer_footer">
                 <p className="text">
-                <a href="https://www.facebook.com/Overdrive-Number-Plates-101512529215072">
-                        <AiFillFacebook />
-                    </a>
-                    <a href="https://www.instagram.com/overdriveregistrations/">
+                    <a href="https://www.instagram.com/drossides/">
                         <AiFillInstagram />
                     </a>
                     Thanks for watching :)
@@ -19,7 +16,7 @@ export default function Footer() {
             <hr />
             <p>
                 By{" "}
-                <a href="https://www.instagram.com/devrossides/">Binman</a>
+                <a href="https://www.twitch.tv/binvan">Binman</a>
             </p>
         </footer>
     );
